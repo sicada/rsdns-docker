@@ -1,0 +1,14 @@
+version: "3.5"
+services:
+  rsdns:
+    container_name: rsdns
+    image: sicada/rsdns:latest
+    networks:
+      - default_net
+    env_file:
+      - ./.env
+    
+networks:
+  default_net:
+      name: default_net
+      
